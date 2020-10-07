@@ -217,6 +217,7 @@ class Lane extends _react.Component {
         ref: this.laneDidMount,
         isDraggingOver: isDraggingOver
       }, /*#__PURE__*/_react.default.createElement(_Container.default, {
+        autoScrollEnabled: false,
         orientation: "vertical",
         groupName: this.groupName,
         dragClass: cardDragClass,
