@@ -13733,7 +13733,7 @@ travis-deploy-once@1.0.0-node-0.10-support:
 
 "trello-smooth-dnd@https://github.com/derUli/smooth-dnd":
   version "1.0.0"
-  resolved "https://github.com/derUli/smooth-dnd#867f41780ecc8339947c0adf48e98bb666d2091f"
+  resolved "https://github.com/derUli/smooth-dnd#ababc448bbeec53acb47615408891bb0ad9f6294"
 
 trim-newlines@^1.0.0:
   version "1.0.0"
