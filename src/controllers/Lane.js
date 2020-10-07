@@ -186,7 +186,6 @@ class Lane extends Component {
     return (
       <components.ScrollableLane ref={this.laneDidMount} isDraggingOver={isDraggingOver}>
         <Container
-          autoScrollEnabled={false}
           orientation="vertical"
           groupName={this.groupName}
           dragClass={cardDragClass}
