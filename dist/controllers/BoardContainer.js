@@ -91,6 +91,12 @@ class BoardContainer extends _react.Component {
                 card: event.card
               });
 
+            case 'UPDATE_CARD':
+              return actions.updateCard({
+                laneId: event.laneId,
+                card: event.card
+              });
+
             case 'REMOVE_CARD':
               return actions.removeCard({
                 laneId: event.laneId,
@@ -209,7 +215,6 @@ class BoardContainer extends _react.Component {
       draggable: false
     }), /*#__PURE__*/_react.default.createElement(_reactPopopo.PopoverWrapper, null, /*#__PURE__*/_react.default.createElement(_Container.default, {
       orientation: "horizontal",
-      autoScrollEnabled: false,
       onDragStart: this.onDragStart,
       dragClass: laneDragClass,
       dropClass: laneDropClass,
@@ -240,8 +245,7 @@ class BoardContainer extends _react.Component {
         key: lane.id
       }, laneToRender) : laneToRender;
     }))), canAddLanes && /*#__PURE__*/_react.default.createElement(_Container.default, {
-      orientation: "horizontal",
-      autoScrollEnabled: false
+      orientation: "horizontal"
     }, editable && !addLaneMode ? /*#__PURE__*/_react.default.createElement(components.NewLaneSection, {
       t: t,
       onClick: this.showEditableLane

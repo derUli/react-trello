@@ -144,6 +144,34 @@ const LaneHelper = {
       }
     });
   },
+  updateCardFromLane: (state, {
+    laneId,
+    card
+  }) => {
+    const laneIndex = state.lanes.findIndex(x => x.id === laneId);
+
+    if (laneIndex < 0) {
+      return state;
+    }
+
+    const cardIndex = state.lanes[laneIndex].cards.findIndex(x => x.id === card.id);
+
+    if (cardIndex < 0) {
+      return state;
+    }
+
+    return (0, _immutabilityHelper.default)(state, {
+      lanes: {
+        [laneIndex]: {
+          cards: {
+            [cardIndex]: {
+              $set: card
+            }
+          }
+        }
+      }
+    });
+  },
   moveCardAcrossLanes: (state, {
     fromLaneId,
     toLaneId,

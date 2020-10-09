@@ -21,8 +21,6 @@ var _Elements = require("../styles/Elements");
 
 var _NewLaneTitleEditor = _interopRequireDefault(require("../widgets/NewLaneTitleEditor"));
 
-var _reactClickOutside = _interopRequireDefault(require("react-click-outside"));
-
 class NewLane extends _react.Component {
   constructor(...args) {
     super(...args);
@@ -45,9 +43,7 @@ class NewLane extends _react.Component {
     const _this$props = this.props,
           onCancel = _this$props.onCancel,
           t = _this$props.t;
-    return /*#__PURE__*/_react.default.createElement(_reactClickOutside.default, {
-      onClickOutside: this.onClickOutside
-    }, /*#__PURE__*/_react.default.createElement(_Base.Section, null, /*#__PURE__*/_react.default.createElement(_Base.LaneTitle, null, /*#__PURE__*/_react.default.createElement(_NewLaneTitleEditor.default, {
+    return /*#__PURE__*/_react.default.createElement(_Base.Section, null, /*#__PURE__*/_react.default.createElement(_Base.LaneTitle, null, /*#__PURE__*/_react.default.createElement(_NewLaneTitleEditor.default, {
       ref: _ref => this.refInput = _ref,
       placeholder: t('placeholder.title'),
       onCancel: this.props.onCancel,
@@ -59,7 +55,7 @@ class NewLane extends _react.Component {
       onClick: this.handleSubmit
     }, t('button.Add lane')), /*#__PURE__*/_react.default.createElement(_Elements.CancelButton, {
       onClick: onCancel
-    }, t('button.Cancel')))));
+    }, t('button.Cancel'))));
   }
 
 }
