@@ -208,7 +208,6 @@ class BoardContainer extends _react.Component {
 
     const passthroughProps = (0, _pick.default)(this.props, ['onCardMoveAcrossLanes', 'onLaneScroll', 'onLaneDelete', 'onLaneUpdate', 'onCardClick', 'onBeforeCardDelete', 'onCardDelete', 'onCardAdd', 'onLaneClick', 'laneSortFunction', 'draggable', 'laneDraggable', 'cardDraggable', 'collapsibleLanes', 'canAddLanes', 'hideCardDeleteIcon', 'tagStyle', 'handleDragStart', 'handleDragEnd', 'cardDragClass', 'editLaneTitle', 't']);
     const isOldIOS = document.querySelector('html').className.includes('is-safari-lte13');
-    alert(isOldIOS.toString());
     return _react.default.createElement(components.BoardWrapper, (0, _extends2.default)({
       style: style
     }, otherProps, {
