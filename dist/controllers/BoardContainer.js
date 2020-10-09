@@ -207,12 +207,14 @@ class BoardContainer extends _react.Component {
     const addLaneMode = this.state.addLaneMode; // Stick to whitelisting attributes to segregate board and lane props
 
     const passthroughProps = (0, _pick.default)(this.props, ['onCardMoveAcrossLanes', 'onLaneScroll', 'onLaneDelete', 'onLaneUpdate', 'onCardClick', 'onBeforeCardDelete', 'onCardDelete', 'onCardAdd', 'onLaneClick', 'laneSortFunction', 'draggable', 'laneDraggable', 'cardDraggable', 'collapsibleLanes', 'canAddLanes', 'hideCardDeleteIcon', 'tagStyle', 'handleDragStart', 'handleDragEnd', 'cardDragClass', 'editLaneTitle', 't']);
+    const isOldIOS = document.querySelector('html').className.includes('is-safari-lte13');
     return _react.default.createElement(components.BoardWrapper, (0, _extends2.default)({
       style: style
     }, otherProps, {
       draggable: false
     }), _react.default.createElement(_reactPopopo.PopoverWrapper, null, _react.default.createElement(_Container.default, {
       orientation: "horizontal",
+      autoScrollEnabled: !isOldIOS,
       onDragStart: this.onDragStart,
       dragClass: laneDragClass,
       dropClass: laneDropClass,
@@ -243,7 +245,8 @@ class BoardContainer extends _react.Component {
         key: lane.id
       }, laneToRender) : laneToRender;
     }))), canAddLanes && _react.default.createElement(_Container.default, {
-      orientation: "horizontal"
+      orientation: "horizontal",
+      autoScrollEnabled: !isOldIOS
     }, editable && !addLaneMode ? _react.default.createElement(components.NewLaneSection, {
       t: t,
       onClick: this.showEditableLane

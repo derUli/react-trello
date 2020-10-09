@@ -163,11 +163,14 @@ class BoardContainer extends Component {
       't'
     ])
 
+    const isOldIOS = document.querySelector('html').className.includes('is-safari-lte13')
+
     return (
       <components.BoardWrapper style={style} {...otherProps} draggable={false}>
         <PopoverWrapper>
           <Container
             orientation="horizontal"
+            autoScrollEnabled={!isOldIOS}
             onDragStart={this.onDragStart}
             dragClass={laneDragClass}
             dropClass={laneDropClass}
@@ -199,7 +202,7 @@ class BoardContainer extends Component {
           </Container>
         </PopoverWrapper>
         {canAddLanes && (
-          <Container orientation="horizontal">
+          <Container orientation="horizontal"  autoScrollEnabled={!isOldIOS}>
             {editable && !addLaneMode ? <components.NewLaneSection t={t} onClick={this.showEditableLane} /> : (
               addLaneMode && <components.NewLaneForm onCancel={this.hideEditableLane} onAdd={this.addNewLane} t={t}/>
             )}
