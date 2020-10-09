@@ -22,12 +22,12 @@ const TEST = _propTypes.default.elementType;
 const LaneMenu = ({
   t,
   onDelete
-}) => /*#__PURE__*/_react.default.createElement(_reactPopopo.Popover, {
+}) => _react.default.createElement(_reactPopopo.Popover, {
   position: "bottom",
   PopoverContainer: _Base.CustomPopoverContainer,
   PopoverContent: _Base.CustomPopoverContent,
-  trigger: /*#__PURE__*/_react.default.createElement(_Elements.MenuButton, null, "\u22EE")
-}, /*#__PURE__*/_react.default.createElement(_Elements.LaneMenuHeader, null, /*#__PURE__*/_react.default.createElement(_Elements.LaneMenuTitle, null, t('Lane actions')), /*#__PURE__*/_react.default.createElement(_Elements.DeleteWrapper, null, /*#__PURE__*/_react.default.createElement(_Elements.GenDelButton, null, "\u2716"))), /*#__PURE__*/_react.default.createElement(_Elements.LaneMenuContent, null, /*#__PURE__*/_react.default.createElement(_Elements.LaneMenuItem, {
+  trigger: _react.default.createElement(_Elements.MenuButton, null, "\u22EE")
+}, _react.default.createElement(_Elements.LaneMenuHeader, null, _react.default.createElement(_Elements.LaneMenuTitle, null, t('Lane actions')), _react.default.createElement(_Elements.DeleteWrapper, null, _react.default.createElement(_Elements.GenDelButton, null, "\u2716"))), _react.default.createElement(_Elements.LaneMenuContent, null, _react.default.createElement(_Elements.LaneMenuItem, {
   onClick: onDelete
 }, t('Delete lane'))));
 

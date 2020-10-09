@@ -57,7 +57,7 @@ exports.default = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+var _objectSpread2 = _interopRequireDefault(require("@babel/runtime/helpers/objectSpread"));
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
@@ -83,10 +83,6 @@ var _widgets = _interopRequireDefault(require("./widgets"));
 
 var _createTranslate = _interopRequireDefault(require("./helpers/createTranslate"));
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
 const DEFAULT_LANG = 'en';
 
 var _default = (_ref) => {
@@ -96,9 +92,9 @@ var _default = (_ref) => {
       otherProps = (0, _objectWithoutProperties2.default)(_ref, ["components", "lang"]);
   (0, _deprecationWarnings.default)(otherProps);
   const translate = (0, _createTranslate.default)(_locales.default[lang].translation);
-  return /*#__PURE__*/_react.default.createElement(_Board.default, (0, _extends2.default)({
+  return _react.default.createElement(_Board.default, (0, _extends2.default)({
     t: translate,
-    components: _objectSpread(_objectSpread({}, _components.default), components)
+    components: (0, _objectSpread2.default)({}, _components.default, components)
   }, otherProps));
 };
 

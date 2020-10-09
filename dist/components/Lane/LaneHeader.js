@@ -30,21 +30,21 @@ const LaneHeaderComponent = ({
   t,
   laneDraggable
 }) => {
-  return /*#__PURE__*/_react.default.createElement(_Base.LaneHeader, {
+  return _react.default.createElement(_Base.LaneHeader, {
     onDoubleClick: onDoubleClick,
     editLaneTitle: editLaneTitle
-  }, /*#__PURE__*/_react.default.createElement(_Base.Title, {
+  }, _react.default.createElement(_Base.Title, {
     draggable: laneDraggable,
     style: titleStyle
-  }, editLaneTitle ? /*#__PURE__*/_react.default.createElement(_InlineInput.default, {
+  }, editLaneTitle ? _react.default.createElement(_InlineInput.default, {
     value: title,
     border: true,
     placeholder: t('placeholder.title'),
     resize: "vertical",
     onSave: updateTitle
-  }) : title), label && /*#__PURE__*/_react.default.createElement(_Base.RightContent, null, /*#__PURE__*/_react.default.createElement("span", {
+  }) : title), label && _react.default.createElement(_Base.RightContent, null, _react.default.createElement("span", {
     style: labelStyle
-  }, label)), canAddLanes && /*#__PURE__*/_react.default.createElement(_LaneMenu.default, {
+  }, label)), canAddLanes && _react.default.createElement(_LaneMenu.default, {
     t: t,
     onDelete: onDelete
   }));

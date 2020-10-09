@@ -46,16 +46,16 @@ class Card extends _react.Component {
           description = _this$props.description,
           tags = _this$props.tags,
           cardDraggable = _this$props.cardDraggable;
-    return /*#__PURE__*/_react.default.createElement(_Base.MovableCardWrapper, {
+    return _react.default.createElement(_Base.MovableCardWrapper, {
       "data-id": id,
       onClick: onClick,
       style: style,
       className: className
-    }, /*#__PURE__*/_react.default.createElement(_Base.CardHeader, null, /*#__PURE__*/_react.default.createElement(_Base.CardTitle, {
+    }, _react.default.createElement(_Base.CardHeader, null, _react.default.createElement(_Base.CardTitle, {
       draggable: cardDraggable
-    }, title), /*#__PURE__*/_react.default.createElement(_Base.CardRightContent, null, label), showDeleteButton && /*#__PURE__*/_react.default.createElement(_DeleteButton.default, {
+    }, title), _react.default.createElement(_Base.CardRightContent, null, label), showDeleteButton && _react.default.createElement(_DeleteButton.default, {
       onClick: this.onDelete
-    })), /*#__PURE__*/_react.default.createElement(_Base.Detail, null, description), tags && tags.length > 0 && /*#__PURE__*/_react.default.createElement(_Base.Footer, null, tags.map(tag => /*#__PURE__*/_react.default.createElement(_Tag.default, (0, _extends2.default)({
+    })), _react.default.createElement(_Base.Detail, null, description), tags && tags.length > 0 && _react.default.createElement(_Base.Footer, null, tags.map(tag => _react.default.createElement(_Tag.default, (0, _extends2.default)({
       key: tag.title
     }, tag, {
       tagStyle: tagStyle

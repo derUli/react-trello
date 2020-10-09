@@ -12,7 +12,7 @@ var _react = _interopRequireDefault(require("react"));
 var _Elements = require("../styles/Elements");
 
 const DeleteButton = props => {
-  return /*#__PURE__*/_react.default.createElement(_Elements.DeleteWrapper, props, /*#__PURE__*/_react.default.createElement(_Elements.DelButton, null, "\u2716"));
+  return _react.default.createElement(_Elements.DeleteWrapper, props, _react.default.createElement(_Elements.DelButton, null, "\u2716"));
 };
 
 var _default = DeleteButton;

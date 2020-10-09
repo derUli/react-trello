@@ -16,7 +16,7 @@ var _Elements = require("../styles/Elements");
 var _default = ({
   t,
   onClick
-}) => /*#__PURE__*/_react.default.createElement(_Base.NewLaneSection, null, /*#__PURE__*/_react.default.createElement(_Elements.AddLaneLink, {
+}) => _react.default.createElement(_Base.NewLaneSection, null, _react.default.createElement(_Elements.AddLaneLink, {
   t: t,
   onClick: onClick
 }, t('Add another lane')));

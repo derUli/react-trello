@@ -38,19 +38,19 @@ class NewCardForm extends _react.Component {
     const _this$props = this.props,
           onCancel = _this$props.onCancel,
           t = _this$props.t;
-    return /*#__PURE__*/_react.default.createElement(_Base.CardForm, null, /*#__PURE__*/_react.default.createElement(_Base.CardWrapper, null, /*#__PURE__*/_react.default.createElement(_Base.CardHeader, null, /*#__PURE__*/_react.default.createElement(_Base.CardTitle, null, /*#__PURE__*/_react.default.createElement(_EditableLabel.default, {
+    return _react.default.createElement(_Base.CardForm, null, _react.default.createElement(_Base.CardWrapper, null, _react.default.createElement(_Base.CardHeader, null, _react.default.createElement(_Base.CardTitle, null, _react.default.createElement(_EditableLabel.default, {
       placeholder: t('placeholder.title'),
       onChange: val => this.updateField('title', val),
       autoFocus: true
-    })), /*#__PURE__*/_react.default.createElement(_Base.CardRightContent, null, /*#__PURE__*/_react.default.createElement(_EditableLabel.default, {
+    })), _react.default.createElement(_Base.CardRightContent, null, _react.default.createElement(_EditableLabel.default, {
       placeholder: t('placeholder.label'),
       onChange: val => this.updateField('label', val)
-    }))), /*#__PURE__*/_react.default.createElement(_Base.Detail, null, /*#__PURE__*/_react.default.createElement(_EditableLabel.default, {
+    }))), _react.default.createElement(_Base.Detail, null, _react.default.createElement(_EditableLabel.default, {
       placeholder: t('placeholder.description'),
       onChange: val => this.updateField('description', val)
-    }))), /*#__PURE__*/_react.default.createElement(_Elements.AddButton, {
+    }))), _react.default.createElement(_Elements.AddButton, {
       onClick: this.handleAdd
-    }, t('button.Add card')), /*#__PURE__*/_react.default.createElement(_Elements.CancelButton, {
+    }, t('button.Add card')), _react.default.createElement(_Elements.CancelButton, {
       onClick: onCancel
     }, t('button.Cancel')));
   }

@@ -11,7 +11,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _Loader = require("../styles/Loader");
 
-const Loader = () => /*#__PURE__*/_react.default.createElement(_Loader.LoaderDiv, null, /*#__PURE__*/_react.default.createElement(_Loader.LoadingBar, null), /*#__PURE__*/_react.default.createElement(_Loader.LoadingBar, null), /*#__PURE__*/_react.default.createElement(_Loader.LoadingBar, null), /*#__PURE__*/_react.default.createElement(_Loader.LoadingBar, null));
+const Loader = () => _react.default.createElement(_Loader.LoaderDiv, null, _react.default.createElement(_Loader.LoadingBar, null), _react.default.createElement(_Loader.LoadingBar, null), _react.default.createElement(_Loader.LoadingBar, null), _react.default.createElement(_Loader.LoadingBar, null));
 
 var _default = Loader;
 exports.default = _default;

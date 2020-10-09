@@ -28,7 +28,7 @@ class Draggable extends _react.Component {
     }
 
     const clsName = "".concat(this.props.className ? this.props.className + ' ' : '');
-    return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, this.props, {
+    return _react.default.createElement("div", (0, _extends2.default)({}, this.props, {
       className: "".concat(clsName).concat(wrapperClass)
     }), this.props.children);
   }

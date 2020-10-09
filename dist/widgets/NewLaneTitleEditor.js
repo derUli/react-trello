@@ -72,7 +72,7 @@ class NewLaneTitleEditor extends _react.default.Component {
           autoResize = _this$props.autoResize,
           value = _this$props.value,
           placeholder = _this$props.placeholder;
-    return /*#__PURE__*/_react.default.createElement(_Base.InlineInput, {
+    return _react.default.createElement(_Base.InlineInput, {
       style: {
         resize: resize
       },

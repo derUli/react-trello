@@ -14,7 +14,7 @@ var _Base = require("../styles/Base");
 var _default = ({
   onClick,
   t
-}) => /*#__PURE__*/_react.default.createElement(_Base.AddCardLink, {
+}) => _react.default.createElement(_Base.AddCardLink, {
   onClick: onClick
 }, t('Click to add card'));
 

@@ -77,7 +77,7 @@ class InlineInputController extends _react.default.Component {
           border = _this$props.border,
           value = _this$props.value,
           placeholder = _this$props.placeholder;
-    return /*#__PURE__*/_react.default.createElement(_Base.InlineInput, {
+    return _react.default.createElement(_Base.InlineInput, {
       ref: this.setRef,
       border: border,
       onMouseDown: this.onMouseDown,

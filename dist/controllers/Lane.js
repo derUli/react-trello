@@ -13,6 +13,8 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
+var _objectSpread2 = _interopRequireDefault(require("@babel/runtime/helpers/objectSpread"));
+
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var _react = _interopRequireWildcard(require("react"));
@@ -38,10 +40,6 @@ var _Container = _interopRequireDefault(require("../dnd/Container"));
 var _Draggable = _interopRequireDefault(require("../dnd/Draggable"));
 
 var laneActions = _interopRequireWildcard(require("../actions/LaneActions"));
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 class Lane extends _react.Component {
   constructor(...args) {
@@ -123,11 +121,9 @@ class Lane extends _react.Component {
       const laneId = this.props.id;
       const id = (0, _v.default)();
       this.hideEditableCard();
-
-      let card = _objectSpread({
+      let card = (0, _objectSpread2.default)({
         id
       }, params);
-
       this.props.actions.addCard({
         laneId,
         card
@@ -155,10 +151,9 @@ class Lane extends _react.Component {
       }
 
       if (addedIndex != null) {
-        const newCard = _objectSpread(_objectSpread({}, (0, _cloneDeep.default)(payload)), {}, {
+        const newCard = (0, _objectSpread2.default)({}, (0, _cloneDeep.default)(payload), {
           laneId
         });
-
         const response = handleDragEnd ? handleDragEnd(payload.id, payload.laneId, laneId, addedIndex, newCard) : true;
 
         if (response === undefined || !!response) {
@@ -195,7 +190,7 @@ class Lane extends _react.Component {
       const cardList = this.sortCards(showableCards, laneSortFunction).map((card, idx) => {
         const onDeleteCard = () => this.removeCard(card.id);
 
-        const cardToRender = /*#__PURE__*/_react.default.createElement(components.Card, (0, _extends2.default)({
+        const cardToRender = _react.default.createElement(components.Card, (0, _extends2.default)({
           key: card.id,
           index: idx,
           style: card.style || cardStyle,
@@ -207,16 +202,16 @@ class Lane extends _react.Component {
           cardDraggable: cardDraggable
         }, card));
 
-        return cardDraggable && (!card.hasOwnProperty('draggable') || card.draggable) ? /*#__PURE__*/_react.default.createElement(_Draggable.default, {
+        return cardDraggable && (!card.hasOwnProperty('draggable') || card.draggable) ? _react.default.createElement(_Draggable.default, {
           key: card.id
-        }, cardToRender) : /*#__PURE__*/_react.default.createElement("span", {
+        }, cardToRender) : _react.default.createElement("span", {
           key: card.id
         }, cardToRender);
       });
-      return /*#__PURE__*/_react.default.createElement(components.ScrollableLane, {
+      return _react.default.createElement(components.ScrollableLane, {
         ref: this.laneDidMount,
         isDraggingOver: isDraggingOver
-      }, /*#__PURE__*/_react.default.createElement(_Container.default, {
+      }, _react.default.createElement(_Container.default, {
         orientation: "vertical",
         groupName: this.groupName,
         dragClass: cardDragClass,
@@ -231,10 +226,10 @@ class Lane extends _react.Component {
         }),
         shouldAcceptDrop: this.shouldAcceptDrop,
         getChildPayload: index => this.props.getCardDetails(id, index)
-      }, cardList), editable && !addCardMode && /*#__PURE__*/_react.default.createElement(components.AddCardLink, {
+      }, cardList), editable && !addCardMode && _react.default.createElement(components.AddCardLink, {
         onClick: this.showEditableCard,
         t: t
-      }), addCardMode && /*#__PURE__*/_react.default.createElement(components.NewCardForm, {
+      }), addCardMode && _react.default.createElement(components.NewCardForm, {
         onCancel: this.hideEditableCard,
         t: t,
         laneId: id,
@@ -259,7 +254,7 @@ class Lane extends _react.Component {
     });
     (0, _defineProperty2.default)(this, "renderHeader", pickedProps => {
       const components = this.props.components;
-      return /*#__PURE__*/_react.default.createElement(components.LaneHeader, (0, _extends2.default)({}, pickedProps, {
+      return _react.default.createElement(components.LaneHeader, (0, _extends2.default)({}, pickedProps, {
         onDelete: this.removeLane,
         onDoubleClick: this.toggleLaneCollapsed,
         updateTitle: this.updateTitle
@@ -315,15 +310,15 @@ class Lane extends _react.Component {
           otherProps = (0, _objectWithoutProperties2.default)(_this$props2, ["id", "cards", "collapsibleLanes", "components", "onLaneClick", "onLaneScroll", "onCardClick", "onCardAdd", "onBeforeCardDelete", "onCardDelete", "onLaneDelete", "onLaneUpdate", "onCardMoveAcrossLanes"]);
     const allClassNames = (0, _classnames.default)('react-trello-lane', this.props.className || '');
     const showFooter = collapsibleLanes && cards.length > 0;
-    return /*#__PURE__*/_react.default.createElement(components.Section, (0, _extends2.default)({}, otherProps, {
+    return _react.default.createElement(components.Section, (0, _extends2.default)({}, otherProps, {
       key: id,
       onClick: () => onLaneClick && onLaneClick(id),
       draggable: false,
       className: allClassNames
-    }), this.renderHeader(_objectSpread({
+    }), this.renderHeader((0, _objectSpread2.default)({
       id,
       cards
-    }, otherProps)), this.renderDragContainer(isDraggingOver), loading && /*#__PURE__*/_react.default.createElement(components.Loader, null), showFooter && /*#__PURE__*/_react.default.createElement(components.LaneFooter, {
+    }, otherProps)), this.renderDragContainer(isDraggingOver), loading && _react.default.createElement(components.Loader, null), showFooter && _react.default.createElement(components.LaneFooter, {
       onClick: this.toggleLaneCollapsed,
       collapsed: collapsed
     }));

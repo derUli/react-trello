@@ -52,9 +52,9 @@ class Board extends _react.Component {
           className = _this$props.className,
           components = _this$props.components;
     const allClassNames = (0, _classnames.default)('react-trello-board', className || '');
-    return /*#__PURE__*/_react.default.createElement(_reactRedux.Provider, {
+    return _react.default.createElement(_reactRedux.Provider, {
       store: this.store
-    }, /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(components.GlobalStyle, null), /*#__PURE__*/_react.default.createElement(_BoardContainer.default, (0, _extends2.default)({
+    }, _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(components.GlobalStyle, null), _react.default.createElement(_BoardContainer.default, (0, _extends2.default)({
       id: this.id
     }, this.props, {
       className: allClassNames

@@ -13923,10 +13923,9 @@ travis-deploy-once@1.0.0-node-0.10-support:
     request-promise "^4.1.1"
     travis-ci "^2.1.1"
 
-trello-smooth-dnd@1.0.0:
+"trello-smooth-dnd@https://github.com/derUli/smooth-dnd":
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/trello-smooth-dnd/-/trello-smooth-dnd-1.0.0.tgz#0003d5b35a1651a16a165b7bfb6b41d0a7c52a17"
-  integrity sha512-KgYEwmxX08Dl4OmioEv24LSnlNp9jNv8lwTQlUMbMm6B+VuwyQuuuoyu4wlsRweiMCCC6sZXpCCGkmAni/vCaQ==
+  resolved "https://github.com/derUli/smooth-dnd#8a6c84af0abf1c2011fb37e88cba97b0b2b411af"
 
 trim-newlines@^1.0.0:
   version "1.0.0"

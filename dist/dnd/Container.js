@@ -57,7 +57,7 @@ class Container extends _react.Component {
     if (this.props.render) {
       return this.props.render(this.setRef);
     } else {
-      return /*#__PURE__*/_react.default.createElement("div", {
+      return _react.default.createElement("div", {
         style: this.props.style,
         ref: this.setRef
       }, this.props.children);

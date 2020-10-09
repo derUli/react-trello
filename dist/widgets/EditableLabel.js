@@ -69,7 +69,7 @@ class EditableLabel extends _react.default.Component {
 
   render() {
     const placeholder = this.props.value.length > 0 ? false : this.props.placeholder;
-    return /*#__PURE__*/_react.default.createElement("div", {
+    return _react.default.createElement("div", {
       ref: _ref => this.refDiv = _ref,
       contentEditable: "true",
       className: this.getClassName(),
