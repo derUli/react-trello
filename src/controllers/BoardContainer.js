@@ -165,7 +165,7 @@ class BoardContainer extends Component {
 
     const isOldIOS = document.querySelector('html').className.includes('is-safari-lte13')
 
-    alert(isoldIOS.toString())
+    alert(isOldIOS.toString())
 
     return (
       <components.BoardWrapper style={style} {...otherProps} draggable={false}>
